@@ -1,0 +1,3431 @@
+[
+  {
+    "text": "This",
+    "start": 0.0,
+    "end": 0.72,
+    "confidence": 0.0944240540266037,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "is",
+    "start": 0.72,
+    "end": 0.86,
+    "confidence": 0.94964998960495,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "what",
+    "start": 0.86,
+    "end": 1.04,
+    "confidence": 0.8948296308517456,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "we",
+    "start": 1.04,
+    "end": 1.22,
+    "confidence": 0.9618100523948669,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "have",
+    "start": 1.22,
+    "end": 1.36,
+    "confidence": 0.8480439186096191,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "done.",
+    "start": 1.36,
+    "end": 1.58,
+    "confidence": 0.9728227853775024,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "We,",
+    "start": 1.9,
+    "end": 1.9,
+    "confidence": 0.1984201818704605,
+    "label": "REPETITION",
+    "pause_before": 0.31999999999999984,
+    "is_synthetic": false
+  },
+  {
+    "text": "this",
+    "start": 1.92,
+    "end": 2.12,
+    "confidence": 0.9621636271476746,
+    "label": "FLUENT",
+    "pause_before": 0.020000000000000018,
+    "is_synthetic": false
+  },
+  {
+    "text": "is",
+    "start": 2.12,
+    "end": 2.24,
+    "confidence": 0.991295576095581,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "what",
+    "start": 2.24,
+    "end": 2.36,
+    "confidence": 0.987500786781311,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "we",
+    "start": 2.36,
+    "end": 2.52,
+    "confidence": 0.9928227663040161,
+    "label": "REPETITION",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "discussed",
+    "start": 2.52,
+    "end": 2.76,
+    "confidence": 0.8792734146118164,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "in",
+    "start": 2.76,
+    "end": 3.02,
+    "confidence": 0.9674636125564575,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "the",
+    "start": 3.02,
+    "end": 3.1,
+    "confidence": 0.9847508668899536,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "last",
+    "start": 3.1,
+    "end": 3.3,
+    "confidence": 0.9980500936508179,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "class,",
+    "start": 3.3,
+    "end": 3.58,
+    "confidence": 0.9758754968643188,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "right?",
+    "start": 3.7,
+    "end": 3.8,
+    "confidence": 0.980240523815155,
+    "label": "FILLED_PAUSE",
+    "pause_before": 0.1200000000000001,
+    "is_synthetic": false
+  },
+  {
+    "text": "Uh,",
+    "start": 4.36,
+    "end": 4.6,
+    "confidence": 0.019005728885531425,
+    "label": "FILLED_PAUSE",
+    "pause_before": 0.5600000000000005,
+    "is_synthetic": false
+  },
+  {
+    "text": "square",
+    "start": 4.74,
+    "end": 5.06,
+    "confidence": 0.8816537261009216,
+    "label": "FLUENT",
+    "pause_before": 0.14000000000000057,
+    "is_synthetic": false
+  },
+  {
+    "text": "one,",
+    "start": 5.06,
+    "end": 5.32,
+    "confidence": 0.7975194454193115,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "you",
+    "start": 5.46,
+    "end": 5.52,
+    "confidence": 0.9747123122215271,
+    "label": "FALSE_START",
+    "pause_before": 0.13999999999999968,
+    "is_synthetic": false
+  },
+  {
+    "text": "all",
+    "start": 5.52,
+    "end": 5.72,
+    "confidence": 0.9761053323745728,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "understand.",
+    "start": 5.72,
+    "end": 6.16,
+    "confidence": 0.9893344044685364,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "It's",
+    "start": 6.52,
+    "end": 6.8,
+    "confidence": 0.9887811839580536,
+    "label": "FLUENT",
+    "pause_before": 0.35999999999999943,
+    "is_synthetic": false
+  },
+  {
+    "text": "like",
+    "start": 6.8,
+    "end": 6.98,
+    "confidence": 0.975074291229248,
+    "label": "FILLED_PAUSE",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "we",
+    "start": 6.98,
+    "end": 7.28,
+    "confidence": 0.413884699344635,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "off",
+    "start": 7.28,
+    "end": 8.16,
+    "confidence": 0.8393625617027283,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "different",
+    "start": 8.16,
+    "end": 8.48,
+    "confidence": 0.9196600317955017,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "lengths.",
+    "start": 8.48,
+    "end": 8.8,
+    "confidence": 0.9197473526000977,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "We",
+    "start": 9.0,
+    "end": 9.0,
+    "confidence": 0.9117600321769714,
+    "label": "REPETITION",
+    "pause_before": 0.1999999999999993,
+    "is_synthetic": false
+  },
+  {
+    "text": "take.",
+    "start": 9.0,
+    "end": 9.2,
+    "confidence": 0.9511269927024841,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "But",
+    "start": 9.64,
+    "end": 9.96,
+    "confidence": 0.9762894511222839,
+    "label": "FLUENT",
+    "pause_before": 0.4400000000000013,
+    "is_synthetic": false
+  },
+  {
+    "text": "the",
+    "start": 9.96,
+    "end": 10.42,
+    "confidence": 0.9878121018409729,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "more",
+    "start": 10.42,
+    "end": 10.66,
+    "confidence": 0.9957690238952637,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "popularly",
+    "start": 10.66,
+    "end": 11.74,
+    "confidence": 0.9543370008468628,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "used",
+    "start": 11.74,
+    "end": 11.96,
+    "confidence": 0.8402470350265503,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "ones",
+    "start": 11.96,
+    "end": 12.14,
+    "confidence": 0.995521068572998,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "are",
+    "start": 12.14,
+    "end": 12.34,
+    "confidence": 0.9928303360939026,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "humming",
+    "start": 12.34,
+    "end": 12.62,
+    "confidence": 0.5169047713279724,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "and",
+    "start": 12.62,
+    "end": 12.9,
+    "confidence": 0.8169288635253906,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "handing.",
+    "start": 12.9,
+    "end": 13.4,
+    "confidence": 0.6085478067398071,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "And",
+    "start": 13.72,
+    "end": 14.02,
+    "confidence": 0.9751691818237305,
+    "label": "REPETITION",
+    "pause_before": 0.3200000000000003,
+    "is_synthetic": false
+  },
+  {
+    "text": "what",
+    "start": 14.02,
+    "end": 14.18,
+    "confidence": 0.9942200183868408,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "is",
+    "start": 14.18,
+    "end": 14.32,
+    "confidence": 0.9929208159446716,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "the",
+    "start": 14.32,
+    "end": 14.4,
+    "confidence": 0.9839771389961243,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "difference",
+    "start": 14.4,
+    "end": 14.62,
+    "confidence": 0.9961328506469727,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "between",
+    "start": 14.62,
+    "end": 14.96,
+    "confidence": 0.9925053715705872,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "two?",
+    "start": 14.96,
+    "end": 15.22,
+    "confidence": 0.8316434025764465,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "Both",
+    "start": 15.26,
+    "end": 15.48,
+    "confidence": 0.9940940737724304,
+    "label": "FLUENT",
+    "pause_before": 0.03999999999999915,
+    "is_synthetic": false
+  },
+  {
+    "text": "of",
+    "start": 15.48,
+    "end": 15.64,
+    "confidence": 0.9980177879333496,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "them",
+    "start": 15.64,
+    "end": 15.76,
+    "confidence": 0.9959999322891235,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "are",
+    "start": 15.76,
+    "end": 15.92,
+    "confidence": 0.9920382499694824,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "like",
+    "start": 15.92,
+    "end": 16.06,
+    "confidence": 0.9696938395500183,
+    "label": "FILLED_PAUSE",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "bell",
+    "start": 16.06,
+    "end": 16.28,
+    "confidence": 0.8350534439086914,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "shaped",
+    "start": 16.28,
+    "end": 16.58,
+    "confidence": 0.8305168747901917,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "sort",
+    "start": 16.58,
+    "end": 16.86,
+    "confidence": 0.4041840136051178,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "of,",
+    "start": 16.86,
+    "end": 17.08,
+    "confidence": 0.9800615906715393,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "but",
+    "start": 17.32,
+    "end": 17.66,
+    "confidence": 0.9831849932670593,
+    "label": "FLUENT",
+    "pause_before": 0.240000000000002,
+    "is_synthetic": false
+  },
+  {
+    "text": "this",
+    "start": 17.66,
+    "end": 17.84,
+    "confidence": 0.9961865544319153,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "is",
+    "start": 17.84,
+    "end": 17.94,
+    "confidence": 0.9985600113868713,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "where",
+    "start": 17.94,
+    "end": 18.1,
+    "confidence": 0.9929038882255554,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "you",
+    "start": 18.1,
+    "end": 18.22,
+    "confidence": 0.996551513671875,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "can",
+    "start": 18.22,
+    "end": 18.36,
+    "confidence": 0.9984152317047119,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "see",
+    "start": 18.36,
+    "end": 18.58,
+    "confidence": 0.997873067855835,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "the",
+    "start": 18.58,
+    "end": 18.74,
+    "confidence": 0.9919718503952026,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "difference,",
+    "start": 18.74,
+    "end": 19.06,
+    "confidence": 0.9801842570304871,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "right?",
+    "start": 19.24,
+    "end": 19.34,
+    "confidence": 0.9378879070281982,
+    "label": "FILLED_PAUSE",
+    "pause_before": 0.17999999999999972,
+    "is_synthetic": false
+  },
+  {
+    "text": "It",
+    "start": 19.4,
+    "end": 19.52,
+    "confidence": 0.3475720286369324,
+    "label": "FLUENT",
+    "pause_before": 0.05999999999999872,
+    "is_synthetic": false
+  },
+  {
+    "text": "looks",
+    "start": 19.52,
+    "end": 19.7,
+    "confidence": 0.9721073508262634,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "like",
+    "start": 19.7,
+    "end": 19.88,
+    "confidence": 0.9970808625221252,
+    "label": "FILLED_PAUSE",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "the",
+    "start": 19.88,
+    "end": 20.0,
+    "confidence": 0.9930627942085266,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "shape",
+    "start": 20.0,
+    "end": 20.16,
+    "confidence": 0.9991633892059326,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "of",
+    "start": 20.16,
+    "end": 20.3,
+    "confidence": 0.995449960231781,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "an",
+    "start": 20.3,
+    "end": 20.46,
+    "confidence": 0.9907912015914917,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "eye,",
+    "start": 20.46,
+    "end": 20.62,
+    "confidence": 0.8988515138626099,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "right?",
+    "start": 20.84,
+    "end": 21.26,
+    "confidence": 0.9494494199752808,
+    "label": "FILLED_PAUSE",
+    "pause_before": 0.21999999999999886,
+    "is_synthetic": false
+  },
+  {
+    "text": "But",
+    "start": 21.34,
+    "end": 21.42,
+    "confidence": 0.9771878123283386,
+    "label": "FALSE_START",
+    "pause_before": 0.0799999999999983,
+    "is_synthetic": false
+  },
+  {
+    "text": "it",
+    "start": 21.42,
+    "end": 21.54,
+    "confidence": 0.9947308301925659,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "is",
+    "start": 21.54,
+    "end": 21.68,
+    "confidence": 0.9965851306915283,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "not",
+    "start": 21.68,
+    "end": 21.84,
+    "confidence": 0.9964359998703003,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "I",
+    "start": 21.84,
+    "end": 22.14,
+    "confidence": 0.37974241375923157,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "what",
+    "start": 22.14,
+    "end": 22.46,
+    "confidence": 0.4873720109462738,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "the",
+    "start": 22.46,
+    "end": 22.68,
+    "confidence": 0.9471279382705688,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "difference",
+    "start": 22.68,
+    "end": 22.96,
+    "confidence": 0.9973734617233276,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "that",
+    "start": 22.96,
+    "end": 23.18,
+    "confidence": 0.9958510398864746,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "you",
+    "start": 23.18,
+    "end": 23.32,
+    "confidence": 0.9970292448997498,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "see",
+    "start": 23.32,
+    "end": 23.54,
+    "confidence": 0.9987789988517761,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "here",
+    "start": 23.54,
+    "end": 23.88,
+    "confidence": 0.9959540367126465,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "is",
+    "start": 23.88,
+    "end": 24.28,
+    "confidence": 0.9847723245620728,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "towards",
+    "start": 24.28,
+    "end": 25.34,
+    "confidence": 0.85664963722229,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "the",
+    "start": 25.34,
+    "end": 25.68,
+    "confidence": 0.5649654269218445,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "towards",
+    "start": 25.68,
+    "end": 26.18,
+    "confidence": 0.811502993106842,
+    "label": "REPETITION",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "the",
+    "start": 26.18,
+    "end": 26.38,
+    "confidence": 0.7380492687225342,
+    "label": "REPETITION",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "center.",
+    "start": 26.38,
+    "end": 26.8,
+    "confidence": 0.9756351113319397,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "It's",
+    "start": 27.0,
+    "end": 27.28,
+    "confidence": 0.9935902059078217,
+    "label": "FLUENT",
+    "pause_before": 0.1999999999999993,
+    "is_synthetic": false
+  },
+  {
+    "text": "kind",
+    "start": 27.28,
+    "end": 27.46,
+    "confidence": 0.9911761283874512,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "of",
+    "start": 27.46,
+    "end": 27.64,
+    "confidence": 0.9992910623550415,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "similar",
+    "start": 27.64,
+    "end": 28.06,
+    "confidence": 0.9991503953933716,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "for",
+    "start": 28.06,
+    "end": 28.56,
+    "confidence": 0.9692527055740356,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "both",
+    "start": 28.56,
+    "end": 28.88,
+    "confidence": 0.997998058795929,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "the",
+    "start": 28.88,
+    "end": 29.14,
+    "confidence": 0.9120983481407166,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "coverage.",
+    "start": 29.14,
+    "end": 29.62,
+    "confidence": 0.744062602519989,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "That",
+    "start": 29.62,
+    "end": 29.9,
+    "confidence": 0.018905285745859146,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "it",
+    "start": 29.9,
+    "end": 30.1,
+    "confidence": 0.644650399684906,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "has,",
+    "start": 30.1,
+    "end": 30.34,
+    "confidence": 0.9668565392494202,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "it's",
+    "start": 30.58,
+    "end": 30.68,
+    "confidence": 0.9018678069114685,
+    "label": "FLUENT",
+    "pause_before": 0.23999999999999844,
+    "is_synthetic": false
+  },
+  {
+    "text": "similar.",
+    "start": 30.68,
+    "end": 31.04,
+    "confidence": 0.9911271929740906,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "[PAUSE 0.8s]",
+    "start": 31.04,
+    "end": 31.88,
+    "confidence": 1.0,
+    "label": "LONG_PAUSE",
+    "pause_before": 0.8399999999999999,
+    "is_synthetic": true
+  },
+  {
+    "text": "But",
+    "start": 31.88,
+    "end": 32.34,
+    "confidence": 0.9301366806030273,
+    "label": "FLUENT",
+    "pause_before": 0.8399999999999999,
+    "is_synthetic": false
+  },
+  {
+    "text": "at",
+    "start": 32.34,
+    "end": 32.62,
+    "confidence": 0.7201632261276245,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "the",
+    "start": 32.62,
+    "end": 32.82,
+    "confidence": 0.9617480635643005,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "towards",
+    "start": 32.82,
+    "end": 33.2,
+    "confidence": 0.5580058097839355,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "the",
+    "start": 33.2,
+    "end": 33.44,
+    "confidence": 0.9903130531311035,
+    "label": "REPETITION",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "end,",
+    "start": 33.44,
+    "end": 33.78,
+    "confidence": 0.9902337789535522,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "it",
+    "start": 33.96,
+    "end": 34.32,
+    "confidence": 0.8908815979957581,
+    "label": "FLUENT",
+    "pause_before": 0.17999999999999972,
+    "is_synthetic": false
+  },
+  {
+    "text": "tapers",
+    "start": 34.32,
+    "end": 34.7,
+    "confidence": 0.8666016161441803,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "down,",
+    "start": 34.7,
+    "end": 34.9,
+    "confidence": 0.9866372346878052,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "right?",
+    "start": 35.48,
+    "end": 35.76,
+    "confidence": 0.9170950651168823,
+    "label": "FILLED_PAUSE",
+    "pause_before": 0.5799999999999983,
+    "is_synthetic": false
+  },
+  {
+    "text": "So",
+    "start": 36.06,
+    "end": 36.14,
+    "confidence": 0.9588515758514404,
+    "label": "FILLED_PAUSE",
+    "pause_before": 0.30000000000000426,
+    "is_synthetic": false
+  },
+  {
+    "text": "this",
+    "start": 36.14,
+    "end": 36.32,
+    "confidence": 0.8733115196228027,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "is",
+    "start": 36.32,
+    "end": 36.52,
+    "confidence": 0.9873358607292175,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "your",
+    "start": 36.52,
+    "end": 36.72,
+    "confidence": 0.9744779467582703,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "hamming",
+    "start": 36.72,
+    "end": 37.34,
+    "confidence": 0.8171989917755127,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "because",
+    "start": 37.34,
+    "end": 38.14,
+    "confidence": 0.7290427684783936,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "it",
+    "start": 38.14,
+    "end": 38.34,
+    "confidence": 0.9940225481987,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "follows",
+    "start": 38.34,
+    "end": 38.68,
+    "confidence": 0.9860088229179382,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "Gaussian",
+    "start": 38.68,
+    "end": 39.42,
+    "confidence": 0.5563837885856628,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "distribution",
+    "start": 39.42,
+    "end": 39.82,
+    "confidence": 0.9756986498832703,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "very",
+    "start": 39.82,
+    "end": 40.18,
+    "confidence": 0.8786093592643738,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "closely.",
+    "start": 40.18,
+    "end": 40.64,
+    "confidence": 0.9940834641456604,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "It",
+    "start": 40.98,
+    "end": 40.98,
+    "confidence": 0.8503895401954651,
+    "label": "FLUENT",
+    "pause_before": 0.3399999999999963,
+    "is_synthetic": false
+  },
+  {
+    "text": "tapers",
+    "start": 40.98,
+    "end": 41.34,
+    "confidence": 0.9523163139820099,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "down",
+    "start": 41.34,
+    "end": 41.66,
+    "confidence": 0.9904757142066956,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "lot",
+    "start": 41.66,
+    "end": 42.14,
+    "confidence": 0.49005794525146484,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "more",
+    "start": 42.14,
+    "end": 42.26,
+    "confidence": 0.2140635997056961,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "slowly,",
+    "start": 42.26,
+    "end": 42.78,
+    "confidence": 0.9944222569465637,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "right?",
+    "start": 43.02,
+    "end": 43.64,
+    "confidence": 0.9740180969238281,
+    "label": "FILLED_PAUSE",
+    "pause_before": 0.240000000000002,
+    "is_synthetic": false
+  },
+  {
+    "text": "And",
+    "start": 43.88,
+    "end": 44.02,
+    "confidence": 0.9785981774330139,
+    "label": "FLUENT",
+    "pause_before": 0.240000000000002,
+    "is_synthetic": false
+  },
+  {
+    "text": "if",
+    "start": 44.02,
+    "end": 44.16,
+    "confidence": 0.9950206279754639,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "it",
+    "start": 44.16,
+    "end": 44.26,
+    "confidence": 0.9573063850402832,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "tapers",
+    "start": 44.26,
+    "end": 44.56,
+    "confidence": 0.9368225634098053,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "down",
+    "start": 44.56,
+    "end": 44.7,
+    "confidence": 0.9383233785629272,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "lot",
+    "start": 44.7,
+    "end": 44.9,
+    "confidence": 0.9483780860900879,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "more",
+    "start": 44.9,
+    "end": 45.04,
+    "confidence": 0.980066180229187,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "slowly,",
+    "start": 45.04,
+    "end": 45.42,
+    "confidence": 0.9906067848205566,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "then",
+    "start": 45.42,
+    "end": 45.62,
+    "confidence": 0.9694685935974121,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "you'll",
+    "start": 45.62,
+    "end": 45.84,
+    "confidence": 0.9640591740608215,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "have",
+    "start": 45.84,
+    "end": 46.0,
+    "confidence": 0.9961236119270325,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "more",
+    "start": 46.0,
+    "end": 46.38,
+    "confidence": 0.27938607335090637,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "spectral",
+    "start": 46.38,
+    "end": 46.72,
+    "confidence": 0.9664607644081116,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "leakage,",
+    "start": 46.72,
+    "end": 47.04,
+    "confidence": 0.9909295439720154,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "right?",
+    "start": 47.46,
+    "end": 47.74,
+    "confidence": 0.9926844835281372,
+    "label": "FILLED_PAUSE",
+    "pause_before": 0.4200000000000017,
+    "is_synthetic": false
+  },
+  {
+    "text": "Whereas",
+    "start": 47.84,
+    "end": 48.1,
+    "confidence": 0.9362457990646362,
+    "label": "FLUENT",
+    "pause_before": 0.10000000000000142,
+    "is_synthetic": false
+  },
+  {
+    "text": "when",
+    "start": 48.1,
+    "end": 48.4,
+    "confidence": 0.772485613822937,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "you",
+    "start": 48.4,
+    "end": 48.58,
+    "confidence": 0.9977559447288513,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "have",
+    "start": 48.58,
+    "end": 48.78,
+    "confidence": 0.9980887770652771,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "this",
+    "start": 48.78,
+    "end": 49.0,
+    "confidence": 0.9949241876602173,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "handing",
+    "start": 49.0,
+    "end": 49.32,
+    "confidence": 0.31288042664527893,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "window,",
+    "start": 49.32,
+    "end": 49.66,
+    "confidence": 0.9922411441802979,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "this",
+    "start": 49.78,
+    "end": 49.9,
+    "confidence": 0.990514874458313,
+    "label": "REPETITION",
+    "pause_before": 0.12000000000000455,
+    "is_synthetic": false
+  },
+  {
+    "text": "is",
+    "start": 49.9,
+    "end": 50.0,
+    "confidence": 0.9974088072776794,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "the",
+    "start": 50.0,
+    "end": 50.14,
+    "confidence": 0.9967615008354187,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "red",
+    "start": 50.14,
+    "end": 50.32,
+    "confidence": 0.9508653283119202,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "one.",
+    "start": 50.32,
+    "end": 50.54,
+    "confidence": 0.967933714389801,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "So",
+    "start": 50.58,
+    "end": 50.76,
+    "confidence": 0.9940231442451477,
+    "label": "FILLED_PAUSE",
+    "pause_before": 0.03999999999999915,
+    "is_synthetic": false
+  },
+  {
+    "text": "it",
+    "start": 50.76,
+    "end": 50.88,
+    "confidence": 0.9859086871147156,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "kind",
+    "start": 50.88,
+    "end": 51.06,
+    "confidence": 0.9773890972137451,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "of",
+    "start": 51.06,
+    "end": 51.2,
+    "confidence": 0.9980233907699585,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "gets",
+    "start": 51.2,
+    "end": 51.44,
+    "confidence": 0.9942814111709595,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "towards",
+    "start": 51.44,
+    "end": 51.72,
+    "confidence": 0.975821316242218,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "the",
+    "start": 51.72,
+    "end": 51.96,
+    "confidence": 0.9955750703811646,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "end.",
+    "start": 51.96,
+    "end": 52.28,
+    "confidence": 0.983447790145874,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "And",
+    "start": 52.78,
+    "end": 52.9,
+    "confidence": 0.9900133609771729,
+    "label": "FLUENT",
+    "pause_before": 0.5,
+    "is_synthetic": false
+  },
+  {
+    "text": "then",
+    "start": 52.9,
+    "end": 53.04,
+    "confidence": 0.984779953956604,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "the",
+    "start": 53.04,
+    "end": 53.28,
+    "confidence": 0.9727511405944824,
+    "label": "REPETITION",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "data",
+    "start": 53.28,
+    "end": 53.8,
+    "confidence": 0.6488546133041382,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "that",
+    "start": 53.8,
+    "end": 54.0,
+    "confidence": 0.9967212080955505,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "you",
+    "start": 54.0,
+    "end": 54.14,
+    "confidence": 0.9965923428535461,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "have",
+    "start": 54.14,
+    "end": 54.28,
+    "confidence": 0.9960359930992126,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "from",
+    "start": 54.28,
+    "end": 54.5,
+    "confidence": 0.9912466406822205,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "the",
+    "start": 54.5,
+    "end": 54.64,
+    "confidence": 0.9968329071998596,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "previous",
+    "start": 54.64,
+    "end": 55.1,
+    "confidence": 0.9971176385879517,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "situation",
+    "start": 55.1,
+    "end": 55.72,
+    "confidence": 0.5277801752090454,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "versus",
+    "start": 55.72,
+    "end": 56.52,
+    "confidence": 0.7448441386222839,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "in",
+    "start": 56.52,
+    "end": 56.76,
+    "confidence": 0.9326977729797363,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "this",
+    "start": 56.76,
+    "end": 56.98,
+    "confidence": 0.9727903008460999,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "that",
+    "start": 56.98,
+    "end": 57.2,
+    "confidence": 0.4212716817855835,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "will",
+    "start": 57.2,
+    "end": 57.38,
+    "confidence": 0.7687260508537292,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "be",
+    "start": 57.38,
+    "end": 57.52,
+    "confidence": 0.9941393136978149,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "the,",
+    "start": 57.52,
+    "end": 57.74,
+    "confidence": 0.9881941080093384,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "the,",
+    "start": 57.74,
+    "end": 58.1,
+    "confidence": 0.9864972233772278,
+    "label": "REPETITION",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "the,",
+    "start": 58.1,
+    "end": 58.36,
+    "confidence": 0.9849667549133301,
+    "label": "REPETITION",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "the.",
+    "start": 58.48,
+    "end": 58.48,
+    "confidence": 0.9663764834403992,
+    "label": "REPETITION",
+    "pause_before": 0.11999999999999744,
+    "is_synthetic": false
+  },
+  {
+    "text": "Passover",
+    "start": 58.48,
+    "end": 59.28,
+    "confidence": 0.17186113446950912,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "will",
+    "start": 59.28,
+    "end": 59.5,
+    "confidence": 0.9895046949386597,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "be",
+    "start": 59.5,
+    "end": 59.68,
+    "confidence": 0.9968764781951904,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "limited",
+    "start": 59.68,
+    "end": 60.36,
+    "confidence": 0.9919712543487549,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "in",
+    "start": 60.36,
+    "end": 60.9,
+    "confidence": 0.9858011603355408,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "hand",
+    "start": 60.9,
+    "end": 61.34,
+    "confidence": 0.23205792903900146,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "handing",
+    "start": 61.34,
+    "end": 61.84,
+    "confidence": 0.03775278106331825,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "window,",
+    "start": 61.84,
+    "end": 62.16,
+    "confidence": 0.9491633772850037,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "right?",
+    "start": 62.16,
+    "end": 62.84,
+    "confidence": 0.9349700212478638,
+    "label": "FILLED_PAUSE",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "So",
+    "start": 63.36,
+    "end": 63.48,
+    "confidence": 0.9655370116233826,
+    "label": "FILLED_PAUSE",
+    "pause_before": 0.519999999999996,
+    "is_synthetic": false
+  },
+  {
+    "text": "having",
+    "start": 63.48,
+    "end": 63.92,
+    "confidence": 0.7700027227401733,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "window",
+    "start": 63.92,
+    "end": 64.18,
+    "confidence": 0.9296777844429016,
+    "label": "REPETITION",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "touches",
+    "start": 64.18,
+    "end": 64.54,
+    "confidence": 0.9579612612724304,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "a",
+    "start": 64.54,
+    "end": 64.82,
+    "confidence": 0.8982076048851013,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "higher",
+    "start": 64.82,
+    "end": 65.18,
+    "confidence": 0.997843861579895,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "value",
+    "start": 65.18,
+    "end": 65.96,
+    "confidence": 0.9712508320808411,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "at",
+    "start": 65.96,
+    "end": 66.36,
+    "confidence": 0.8584360480308533,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "the",
+    "start": 66.36,
+    "end": 66.52,
+    "confidence": 0.9959208965301514,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "edges",
+    "start": 66.52,
+    "end": 66.8,
+    "confidence": 0.9942910671234131,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "compared",
+    "start": 66.8,
+    "end": 67.28,
+    "confidence": 0.9242690801620483,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "to",
+    "start": 67.28,
+    "end": 67.5,
+    "confidence": 0.9969733953475952,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "the",
+    "start": 67.5,
+    "end": 67.62,
+    "confidence": 0.9672675132751465,
+    "label": "REPETITION",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "handing",
+    "start": 67.62,
+    "end": 68.1,
+    "confidence": 0.7720928192138672,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "window,",
+    "start": 68.1,
+    "end": 68.42,
+    "confidence": 0.9869924783706665,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "right?",
+    "start": 68.44,
+    "end": 68.56,
+    "confidence": 0.9468562006950378,
+    "label": "FILLED_PAUSE",
+    "pause_before": 0.01999999999999602,
+    "is_synthetic": false
+  },
+  {
+    "text": "So",
+    "start": 68.68,
+    "end": 68.76,
+    "confidence": 0.9736322164535522,
+    "label": "FILLED_PAUSE",
+    "pause_before": 0.12000000000000455,
+    "is_synthetic": false
+  },
+  {
+    "text": "at",
+    "start": 68.76,
+    "end": 68.98,
+    "confidence": 0.9359080791473389,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "the",
+    "start": 68.98,
+    "end": 69.08,
+    "confidence": 0.9822154641151428,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "edges,",
+    "start": 69.08,
+    "end": 69.34,
+    "confidence": 0.9915474057197571,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "it's",
+    "start": 69.48,
+    "end": 69.78,
+    "confidence": 0.9823380410671234,
+    "label": "FLUENT",
+    "pause_before": 0.14000000000000057,
+    "is_synthetic": false
+  },
+  {
+    "text": "higher.",
+    "start": 69.78,
+    "end": 70.32,
+    "confidence": 0.9950953722000122,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "And",
+    "start": 70.98,
+    "end": 71.5,
+    "confidence": 0.9805285334587097,
+    "label": "FLUENT",
+    "pause_before": 0.6600000000000108,
+    "is_synthetic": false
+  },
+  {
+    "text": "the",
+    "start": 71.5,
+    "end": 71.96,
+    "confidence": 0.9744471311569214,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "handing",
+    "start": 71.96,
+    "end": 72.22,
+    "confidence": 0.7927994728088379,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "window",
+    "start": 72.22,
+    "end": 72.46,
+    "confidence": 0.9966830611228943,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "touches",
+    "start": 72.46,
+    "end": 72.94,
+    "confidence": 0.9761362075805664,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "zero",
+    "start": 72.94,
+    "end": 73.28,
+    "confidence": 0.6811515688896179,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "at",
+    "start": 73.28,
+    "end": 73.48,
+    "confidence": 0.43763843178749084,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "both",
+    "start": 73.48,
+    "end": 73.74,
+    "confidence": 0.9958343505859375,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "the",
+    "start": 73.74,
+    "end": 74.0,
+    "confidence": 0.967034101486206,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "ends,",
+    "start": 74.0,
+    "end": 74.34,
+    "confidence": 0.9781264662742615,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "eliminating",
+    "start": 74.5,
+    "end": 75.54,
+    "confidence": 0.9746618866920471,
+    "label": "FLUENT",
+    "pause_before": 0.1599999999999966,
+    "is_synthetic": false
+  },
+  {
+    "text": "the",
+    "start": 75.54,
+    "end": 75.78,
+    "confidence": 0.8514117002487183,
+    "label": "REPETITION",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "discontinuities,",
+    "start": 75.78,
+    "end": 76.54,
+    "confidence": 0.9700168967247009,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "right?",
+    "start": 76.92,
+    "end": 77.44,
+    "confidence": 0.9854192733764648,
+    "label": "FILLED_PAUSE",
+    "pause_before": 0.37999999999999545,
+    "is_synthetic": false
+  },
+  {
+    "text": "So",
+    "start": 77.72,
+    "end": 77.84,
+    "confidence": 0.987405002117157,
+    "label": "FILLED_PAUSE",
+    "pause_before": 0.28000000000000114,
+    "is_synthetic": false
+  },
+  {
+    "text": "all",
+    "start": 77.84,
+    "end": 78.14,
+    "confidence": 0.9692549705505371,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "the",
+    "start": 78.14,
+    "end": 78.32,
+    "confidence": 0.8711341619491577,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "all",
+    "start": 78.32,
+    "end": 78.6,
+    "confidence": 0.02484237030148506,
+    "label": "REPETITION",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "the",
+    "start": 78.6,
+    "end": 78.76,
+    "confidence": 0.9917833805084229,
+    "label": "REPETITION",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "frequencies",
+    "start": 78.76,
+    "end": 79.12,
+    "confidence": 0.9837982058525085,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "that",
+    "start": 79.12,
+    "end": 79.4,
+    "confidence": 0.9962288737297058,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "you",
+    "start": 79.4,
+    "end": 79.52,
+    "confidence": 0.9900804162025452,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "would",
+    "start": 79.52,
+    "end": 79.68,
+    "confidence": 0.9926180243492126,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "have",
+    "start": 79.68,
+    "end": 79.92,
+    "confidence": 0.9030790328979492,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "in",
+    "start": 79.92,
+    "end": 80.2,
+    "confidence": 0.9807440638542175,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "handing",
+    "start": 80.2,
+    "end": 80.56,
+    "confidence": 0.7933215498924255,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "will",
+    "start": 80.56,
+    "end": 80.8,
+    "confidence": 0.9760338664054871,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "be",
+    "start": 80.8,
+    "end": 80.96,
+    "confidence": 0.9982945322990417,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "captured",
+    "start": 80.96,
+    "end": 81.3,
+    "confidence": 0.9718316793441772,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "because",
+    "start": 81.3,
+    "end": 81.56,
+    "confidence": 0.8819654583930969,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "it's",
+    "start": 81.56,
+    "end": 81.78,
+    "confidence": 0.9468829929828644,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "going",
+    "start": 81.78,
+    "end": 81.88,
+    "confidence": 0.9981281161308289,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "towards",
+    "start": 81.88,
+    "end": 82.14,
+    "confidence": 0.95201176404953,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "the",
+    "start": 82.14,
+    "end": 82.36,
+    "confidence": 0.9931610822677612,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "end",
+    "start": 82.36,
+    "end": 82.5,
+    "confidence": 0.9153454303741455,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "and",
+    "start": 82.5,
+    "end": 82.64,
+    "confidence": 0.7591066956520081,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "it",
+    "start": 82.64,
+    "end": 82.72,
+    "confidence": 0.9643736481666565,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "is",
+    "start": 82.72,
+    "end": 82.82,
+    "confidence": 0.8572401404380798,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "capturing",
+    "start": 82.82,
+    "end": 83.18,
+    "confidence": 0.9205631613731384,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "all",
+    "start": 83.18,
+    "end": 83.64,
+    "confidence": 0.9936133027076721,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "of",
+    "start": 83.64,
+    "end": 83.86,
+    "confidence": 0.9965259432792664,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "it,",
+    "start": 83.86,
+    "end": 84.04,
+    "confidence": 0.9837080836296082,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "right?",
+    "start": 84.3,
+    "end": 84.72,
+    "confidence": 0.9908406138420105,
+    "label": "FILLED_PAUSE",
+    "pause_before": 0.2599999999999909,
+    "is_synthetic": false
+  },
+  {
+    "text": "[PAUSE 0.9s]",
+    "start": 84.72,
+    "end": 85.64,
+    "confidence": 1.0,
+    "label": "LONG_PAUSE",
+    "pause_before": 0.9200000000000017,
+    "is_synthetic": true
+  },
+  {
+    "text": "So",
+    "start": 85.64,
+    "end": 85.82,
+    "confidence": 0.9749853014945984,
+    "label": "FILLED_PAUSE",
+    "pause_before": 0.9200000000000017,
+    "is_synthetic": false
+  },
+  {
+    "text": "handing",
+    "start": 85.82,
+    "end": 86.08,
+    "confidence": 0.5386008620262146,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "window",
+    "start": 86.08,
+    "end": 86.3,
+    "confidence": 0.9839591383934021,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "has",
+    "start": 86.3,
+    "end": 86.5,
+    "confidence": 0.9922232031822205,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "a",
+    "start": 86.5,
+    "end": 86.58,
+    "confidence": 0.9613323211669922,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "more",
+    "start": 86.58,
+    "end": 86.72,
+    "confidence": 0.9980950951576233,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "gradual",
+    "start": 86.72,
+    "end": 87.3,
+    "confidence": 0.9738499522209167,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "follow",
+    "start": 87.3,
+    "end": 87.56,
+    "confidence": 0.8435320258140564,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "up",
+    "start": 87.56,
+    "end": 87.82,
+    "confidence": 0.7143211364746094,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "at",
+    "start": 87.82,
+    "end": 87.9,
+    "confidence": 0.8883474469184875,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "the",
+    "start": 87.9,
+    "end": 88.02,
+    "confidence": 0.9908985495567322,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "edges.",
+    "start": 88.02,
+    "end": 88.32,
+    "confidence": 0.9918013215065002,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "And",
+    "start": 88.32,
+    "end": 89.04,
+    "confidence": 0.057564228773117065,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "reaches",
+    "start": 89.04,
+    "end": 89.32,
+    "confidence": 0.7781884670257568,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "more",
+    "start": 89.32,
+    "end": 89.58,
+    "confidence": 0.9773509502410889,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "smoothly,",
+    "start": 89.58,
+    "end": 89.96,
+    "confidence": 0.9962577819824219,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "providing",
+    "start": 90.2,
+    "end": 90.44,
+    "confidence": 0.981873095035553,
+    "label": "FLUENT",
+    "pause_before": 0.2400000000000091,
+    "is_synthetic": false
+  },
+  {
+    "text": "a",
+    "start": 90.44,
+    "end": 90.6,
+    "confidence": 0.9132289886474609,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "more",
+    "start": 90.6,
+    "end": 90.76,
+    "confidence": 0.9922452569007874,
+    "label": "REPETITION",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "balanced",
+    "start": 90.76,
+    "end": 91.12,
+    "confidence": 0.6702557802200317,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "time",
+    "start": 91.12,
+    "end": 91.4,
+    "confidence": 0.9340642690658569,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "frequency",
+    "start": 91.4,
+    "end": 91.76,
+    "confidence": 0.9895300269126892,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "resolution,",
+    "start": 91.76,
+    "end": 92.2,
+    "confidence": 0.928613007068634,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "right?",
+    "start": 92.2,
+    "end": 92.48,
+    "confidence": 0.9616398215293884,
+    "label": "FILLED_PAUSE",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "So",
+    "start": 92.58,
+    "end": 92.66,
+    "confidence": 0.9885664582252502,
+    "label": "FILLED_PAUSE",
+    "pause_before": 0.09999999999999432,
+    "is_synthetic": false
+  },
+  {
+    "text": "this",
+    "start": 92.66,
+    "end": 92.8,
+    "confidence": 0.6202360987663269,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "is",
+    "start": 92.8,
+    "end": 92.94,
+    "confidence": 0.9950260519981384,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "the",
+    "start": 92.94,
+    "end": 93.1,
+    "confidence": 0.9934351444244385,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "benefit",
+    "start": 93.1,
+    "end": 93.52,
+    "confidence": 0.9969377517700195,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "of",
+    "start": 93.52,
+    "end": 94.52,
+    "confidence": 0.9910575151443481,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "having",
+    "start": 94.52,
+    "end": 96.3,
+    "confidence": 0.9086207151412964,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "this.",
+    "start": 96.3,
+    "end": 96.54,
+    "confidence": 0.9960008263587952,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "[PAUSE 1.1s]",
+    "start": 96.54,
+    "end": 97.6,
+    "confidence": 1.0,
+    "label": "LONG_PAUSE",
+    "pause_before": 1.059999999999988,
+    "is_synthetic": true
+  },
+  {
+    "text": "Hamming",
+    "start": 97.6,
+    "end": 97.88,
+    "confidence": 0.38049217499792576,
+    "label": "FLUENT",
+    "pause_before": 1.059999999999988,
+    "is_synthetic": false
+  },
+  {
+    "text": "versus",
+    "start": 97.88,
+    "end": 98.11999999999999,
+    "confidence": 0.7306535243988037,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "handing,",
+    "start": 98.11999999999999,
+    "end": 98.5,
+    "confidence": 0.14886997640132904,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "right?",
+    "start": 99.14,
+    "end": 99.25999999999999,
+    "confidence": 0.8975543975830078,
+    "label": "FILLED_PAUSE",
+    "pause_before": 0.6400000000000006,
+    "is_synthetic": false
+  },
+  {
+    "text": "Uh,",
+    "start": 99.74,
+    "end": 99.74,
+    "confidence": 0.039279647171497345,
+    "label": "FILLED_PAUSE",
+    "pause_before": 0.480000000000004,
+    "is_synthetic": false
+  },
+  {
+    "text": "these",
+    "start": 99.97999999999999,
+    "end": 100.16,
+    "confidence": 0.9374938607215881,
+    "label": "FLUENT",
+    "pause_before": 0.23999999999999488,
+    "is_synthetic": false
+  },
+  {
+    "text": "we",
+    "start": 100.16,
+    "end": 100.38,
+    "confidence": 0.651780366897583,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "discussed",
+    "start": 100.38,
+    "end": 100.66,
+    "confidence": 0.8411300182342529,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "last",
+    "start": 100.66,
+    "end": 101.0,
+    "confidence": 0.9857770800590515,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "time,",
+    "start": 101.0,
+    "end": 101.19999999999999,
+    "confidence": 0.9890421032905579,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "so",
+    "start": 101.28,
+    "end": 101.39999999999999,
+    "confidence": 0.9839714765548706,
+    "label": "FILLED_PAUSE",
+    "pause_before": 0.0800000000000125,
+    "is_synthetic": false
+  },
+  {
+    "text": "I'll",
+    "start": 101.39999999999999,
+    "end": 101.53999999999999,
+    "confidence": 0.9703636169433594,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "just",
+    "start": 101.53999999999999,
+    "end": 101.67999999999999,
+    "confidence": 0.9967017769813538,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "skip.",
+    "start": 101.67999999999999,
+    "end": 102.52,
+    "confidence": 0.9882131218910217,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "And",
+    "start": 103.1,
+    "end": 103.55999999999999,
+    "confidence": 0.9906327724456787,
+    "label": "FLUENT",
+    "pause_before": 0.5799999999999983,
+    "is_synthetic": false
+  },
+  {
+    "text": "this",
+    "start": 103.55999999999999,
+    "end": 103.75999999999999,
+    "confidence": 0.9944398403167725,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "is",
+    "start": 103.75999999999999,
+    "end": 103.88,
+    "confidence": 0.9973329305648804,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "your",
+    "start": 103.88,
+    "end": 104.05999999999999,
+    "confidence": 0.9941216111183167,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "hand",
+    "start": 104.05999999999999,
+    "end": 104.32,
+    "confidence": 0.963963508605957,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "windowing.",
+    "start": 104.32,
+    "end": 104.88,
+    "confidence": 0.6196110397577286,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "So",
+    "start": 105.08,
+    "end": 105.16,
+    "confidence": 0.9925048351287842,
+    "label": "FILLED_PAUSE",
+    "pause_before": 0.20000000000000284,
+    "is_synthetic": false
+  },
+  {
+    "text": "you,",
+    "start": 105.16,
+    "end": 105.41999999999999,
+    "confidence": 0.9097710847854614,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "so",
+    "start": 105.61999999999999,
+    "end": 105.88,
+    "confidence": 0.9838465452194214,
+    "label": "FILLED_PAUSE",
+    "pause_before": 0.20000000000000284,
+    "is_synthetic": false
+  },
+  {
+    "text": "one",
+    "start": 105.88,
+    "end": 106.83999999999999,
+    "confidence": 0.8565308451652527,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "of",
+    "start": 106.83999999999999,
+    "end": 106.96,
+    "confidence": 0.9970040917396545,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "the",
+    "start": 106.96,
+    "end": 107.11999999999999,
+    "confidence": 0.9976776242256165,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "windows",
+    "start": 107.11999999999999,
+    "end": 107.38,
+    "confidence": 0.7954766154289246,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "x",
+    "start": 107.38,
+    "end": 107.8,
+    "confidence": 0.3875392973423004,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "k",
+    "start": 107.8,
+    "end": 108.28,
+    "confidence": 0.1599128246307373,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "n",
+    "start": 108.28,
+    "end": 108.63999999999999,
+    "confidence": 0.7400017976760864,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "will",
+    "start": 108.63999999999999,
+    "end": 109.47999999999999,
+    "confidence": 0.9624596834182739,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "be.",
+    "start": 109.47999999999999,
+    "end": 109.74,
+    "confidence": 0.9898179173469543,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "So",
+    "start": 109.91999999999999,
+    "end": 110.13999999999999,
+    "confidence": 0.9854192733764648,
+    "label": "FILLED_PAUSE",
+    "pause_before": 0.1799999999999926,
+    "is_synthetic": false
+  },
+  {
+    "text": "from",
+    "start": 110.13999999999999,
+    "end": 110.56,
+    "confidence": 0.9475829601287842,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "the",
+    "start": 110.56,
+    "end": 110.67999999999999,
+    "confidence": 0.9978806972503662,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "previous",
+    "start": 110.67999999999999,
+    "end": 111.0,
+    "confidence": 0.9992527365684509,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "version,",
+    "start": 111.0,
+    "end": 111.3,
+    "confidence": 0.9568191766738892,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "you",
+    "start": 111.5,
+    "end": 111.5,
+    "confidence": 0.9877341389656067,
+    "label": "FALSE_START",
+    "pause_before": 0.20000000000000284,
+    "is_synthetic": false
+  },
+  {
+    "text": "have",
+    "start": 111.5,
+    "end": 111.61999999999999,
+    "confidence": 0.9862039089202881,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "some",
+    "start": 111.61999999999999,
+    "end": 112.03999999999999,
+    "confidence": 0.987677276134491,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "data",
+    "start": 112.03999999999999,
+    "end": 112.38,
+    "confidence": 0.997369647026062,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "and",
+    "start": 112.38,
+    "end": 112.78,
+    "confidence": 0.7883845567703247,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "then",
+    "start": 112.78,
+    "end": 112.94,
+    "confidence": 0.9788694977760315,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "the",
+    "start": 112.94,
+    "end": 113.41999999999999,
+    "confidence": 0.9857739210128784,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "window",
+    "start": 113.41999999999999,
+    "end": 113.86,
+    "confidence": 0.35043865442276,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "length",
+    "start": 113.86,
+    "end": 114.11999999999999,
+    "confidence": 0.9882798194885254,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "that",
+    "start": 114.11999999999999,
+    "end": 114.32,
+    "confidence": 0.9767208695411682,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "you",
+    "start": 114.32,
+    "end": 114.52,
+    "confidence": 0.9939485788345337,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "have,",
+    "start": 114.52,
+    "end": 114.67999999999999,
+    "confidence": 0.9659023880958557,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "right?",
+    "start": 114.89999999999999,
+    "end": 115.33999999999999,
+    "confidence": 0.9592725038528442,
+    "label": "FILLED_PAUSE",
+    "pause_before": 0.21999999999999886,
+    "is_synthetic": false
+  },
+  {
+    "text": "And",
+    "start": 115.82,
+    "end": 116.02,
+    "confidence": 0.9747186303138733,
+    "label": "FLUENT",
+    "pause_before": 0.480000000000004,
+    "is_synthetic": false
+  },
+  {
+    "text": "what",
+    "start": 116.02,
+    "end": 116.46,
+    "confidence": 0.9951868653297424,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "we",
+    "start": 116.46,
+    "end": 116.63999999999999,
+    "confidence": 0.9584395289421082,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "do.",
+    "start": 116.63999999999999,
+    "end": 116.78,
+    "confidence": 0.9945933222770691,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "So",
+    "start": 116.89999999999999,
+    "end": 116.97999999999999,
+    "confidence": 0.9735061526298523,
+    "label": "FILLED_PAUSE",
+    "pause_before": 0.11999999999999034,
+    "is_synthetic": false
+  },
+  {
+    "text": "reconstruction,",
+    "start": 116.97999999999999,
+    "end": 117.32,
+    "confidence": 0.9568617343902588,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "if",
+    "start": 117.32,
+    "end": 117.89999999999999,
+    "confidence": 0.9903485774993896,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "you",
+    "start": 117.89999999999999,
+    "end": 118.06,
+    "confidence": 0.9892629981040955,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "were",
+    "start": 118.06,
+    "end": 118.3,
+    "confidence": 0.9679279923439026,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "to",
+    "start": 118.3,
+    "end": 118.47999999999999,
+    "confidence": 0.9972943663597107,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "do",
+    "start": 118.47999999999999,
+    "end": 118.61999999999999,
+    "confidence": 0.9610636830329895,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "the",
+    "start": 118.61999999999999,
+    "end": 118.75999999999999,
+    "confidence": 0.9900424480438232,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "reconstruction",
+    "start": 118.75999999999999,
+    "end": 119.25999999999999,
+    "confidence": 0.9937667846679688,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "reconstruction,",
+    "start": 119.25999999999999,
+    "end": 119.74,
+    "confidence": 0.6523157358169556,
+    "label": "REPETITION",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "reconstruction",
+    "start": 119.83999999999999,
+    "end": 120.19999999999999,
+    "confidence": 0.5745247006416321,
+    "label": "REPETITION",
+    "pause_before": 0.09999999999999432,
+    "is_synthetic": false
+  },
+  {
+    "text": "would",
+    "start": 120.19999999999999,
+    "end": 120.32,
+    "confidence": 0.8652828335762024,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "be",
+    "start": 120.32,
+    "end": 120.56,
+    "confidence": 0.9942111372947693,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "windows",
+    "start": 120.56,
+    "end": 121.32,
+    "confidence": 0.49028846621513367,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "minus",
+    "start": 121.32,
+    "end": 121.67999999999999,
+    "confidence": 0.7514946460723877,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "one.",
+    "start": 121.67999999999999,
+    "end": 121.89999999999999,
+    "confidence": 0.7066055536270142,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "How",
+    "start": 121.94,
+    "end": 122.08,
+    "confidence": 0.9954427480697632,
+    "label": "FLUENT",
+    "pause_before": 0.04000000000000625,
+    "is_synthetic": false
+  },
+  {
+    "text": "many",
+    "start": 122.08,
+    "end": 122.28,
+    "confidence": 0.9995911717414856,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "windows",
+    "start": 122.28,
+    "end": 122.52,
+    "confidence": 0.9255543351173401,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "you",
+    "start": 122.52,
+    "end": 122.74,
+    "confidence": 0.8334338068962097,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "have",
+    "start": 122.74,
+    "end": 122.89999999999999,
+    "confidence": 0.9850244522094727,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "had",
+    "start": 122.89999999999999,
+    "end": 123.06,
+    "confidence": 0.8773748278617859,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "into",
+    "start": 123.06,
+    "end": 123.56,
+    "confidence": 0.8208989500999451,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "the",
+    "start": 123.56,
+    "end": 123.78,
+    "confidence": 0.9437318444252014,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "step",
+    "start": 123.78,
+    "end": 124.06,
+    "confidence": 0.9414377808570862,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  },
+  {
+    "text": "one.",
+    "start": 124.06,
+    "end": 124.17999999999999,
+    "confidence": 0.3861812949180603,
+    "label": "FLUENT",
+    "pause_before": 0.0,
+    "is_synthetic": false
+  }
+]

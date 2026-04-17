@@ -1,0 +1,54 @@
+{
+  "duration_s": 124.18,
+  "total_words": 378,
+  "fluent_words": 325,
+  "filled_pauses": 30,
+  "false_starts": 3,
+  "repetitions": 20,
+  "long_pauses": 3,
+  "total_pause_time_s": 2.82,
+  "wpm": 157.03,
+  "fpm": 14.5,
+  "pause_freq": 1.45,
+  "per_minute": [
+    {
+      "minute": 1,
+      "t_start": 0.0,
+      "t_end": 60.0,
+      "wpm": 170.0,
+      "fpm": 12.0,
+      "long_pauses": 1,
+      "filled_pauses": 12,
+      "fluent_words": 170
+    },
+    {
+      "minute": 2,
+      "t_start": 60.0,
+      "t_end": 120.0,
+      "wpm": 140.0,
+      "fpm": 18.0,
+      "long_pauses": 2,
+      "filled_pauses": 18,
+      "fluent_words": 140
+    },
+    {
+      "minute": 3,
+      "t_start": 120.0,
+      "t_end": 124.18,
+      "wpm": 215.31,
+      "fpm": 0.0,
+      "long_pauses": 0,
+      "filled_pauses": 0,
+      "fluent_words": 15
+    }
+  ],
+  "fluency_score": 50,
+  "grade": "D",
+  "verdict": "Below average \u2014 frequent disfluencies affecting clarity",
+  "filler_breakdown": {
+    "right": 13,
+    "uh": 2,
+    "like": 3,
+    "so": 12
+  }
+}

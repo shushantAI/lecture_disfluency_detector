@@ -1,0 +1,37 @@
+{
+  "duration_s": 34.4,
+  "total_words": 102,
+  "fluent_words": 81,
+  "filled_pauses": 15,
+  "false_starts": 1,
+  "repetitions": 5,
+  "long_pauses": 4,
+  "total_pause_time_s": 3.93,
+  "wpm": 141.28,
+  "fpm": 26.16,
+  "pause_freq": 6.98,
+  "per_minute": [
+    {
+      "minute": 1,
+      "t_start": 0.0,
+      "t_end": 34.4,
+      "wpm": 141.28,
+      "fpm": 26.16,
+      "long_pauses": 4,
+      "filled_pauses": 15,
+      "fluent_words": 81
+    }
+  ],
+  "fluency_score": 37,
+  "grade": "F",
+  "verdict": "Poor fluency \u2014 heavy disfluency load, strongly impacts comprehension",
+  "filler_breakdown": {
+    "um": 4,
+    "uh": 3,
+    "so": 3,
+    "you know": 1,
+    "basically": 2,
+    "right": 1,
+    "like": 1
+  }
+}

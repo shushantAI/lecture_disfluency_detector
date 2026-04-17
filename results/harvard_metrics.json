@@ -1,0 +1,29 @@
+{
+  "duration_s": 16.58,
+  "total_words": 43,
+  "fluent_words": 43,
+  "filled_pauses": 0,
+  "false_starts": 0,
+  "repetitions": 0,
+  "long_pauses": 2,
+  "total_pause_time_s": 1.62,
+  "wpm": 155.61,
+  "fpm": 0.0,
+  "pause_freq": 7.24,
+  "per_minute": [
+    {
+      "minute": 1,
+      "t_start": 0.9,
+      "t_end": 17.48,
+      "wpm": 155.61,
+      "fpm": 0.0,
+      "long_pauses": 2,
+      "filled_pauses": 0,
+      "fluent_words": 43
+    }
+  ],
+  "fluency_score": 80,
+  "grade": "B",
+  "verdict": "Good fluency \u2014 a few fillers, mostly clear delivery",
+  "filler_breakdown": {}
+}
