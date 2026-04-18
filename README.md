@@ -69,25 +69,13 @@ Score (0–100) =
 pip install -r requirements.txt
 ```
 
-### 2. Run the demo (no GPU, no real audio needed)
-
-```bash
-python demo/run_demo.py
-```
-
-Output files appear in `demo/`:
-- `demo/timeline.png`
-- `demo/spectrogram.png`
-- `demo/trend.png`
-- `demo/report_card.pdf`  ← main deliverable
-
-### 3. Run on your own lecture
+### 2. Run on your own lecture
 
 ```bash
 python pipeline.py lecture.wav --speaker "Dr. Sharma" --out results/
 ```
 
-### 4. All options
+### 3. All options
 
 ```
 python pipeline.py <audio> [options]
