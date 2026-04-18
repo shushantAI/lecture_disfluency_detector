@@ -1,15 +1,11 @@
 """
 metrics.py
-----------
-Computes all fluency metrics from the tagged word list:
 
-  FPM   - Fillers Per Minute
-  WPM   - Words Per Minute (fluent words only)
-  pauses - count and total duration of long pauses
-  fluency_score - composite 0–100 score
-
-Also produces a per-minute breakdown for trend analysis
-(useful for showing *where* in the lecture fluency dropped).
+Computes fluency metrics from the tagged word list. I calculate things
+like fillers per minute, speaking rate, long pause frequency, and then
+combine them into a single fluency score out of 100 with a letter grade.
+Also breaks down stats per minute so you can see how fluency changes
+throughout the lecture.
 """
 
 from dataclasses import dataclass, field
@@ -18,38 +14,31 @@ import math
 from classify import TaggedWord, Label
 
 
-# ── Result dataclass ───────────────────────────────────────────────────────────
 @dataclass
 class FluentyMetrics:
-    # Core
-    duration_s: float          # total speech duration (seconds)
-    total_words: int           # all real (non-synthetic) words
-    fluent_words: int          # words labelled FLUENT
-    filled_pauses: int         # FILLED_PAUSE count
-    false_starts: int          # FALSE_START count
-    repetitions: int           # REPETITION count
-    long_pauses: int           # LONG_PAUSE synthetic token count
-    total_pause_time_s: float  # total seconds of long pauses
+    duration_s: float
+    total_words: int
+    fluent_words: int
+    filled_pauses: int
+    false_starts: int
+    repetitions: int
+    long_pauses: int
+    total_pause_time_s: float
 
-    # Rates
-    wpm: float                 # words per minute (fluent only)
-    fpm: float                 # fillers per minute
-    pause_freq: float          # long pauses per minute
+    wpm: float
+    fpm: float
+    pause_freq: float
 
-    # Trend (per-minute breakdown)
     per_minute: List[Dict] = field(default_factory=list)
 
-    # Composite score
     fluency_score: int = 0
     grade: str = ""
     verdict: str = ""
 
-    # Detailed counts by filler text
     filler_breakdown: Dict[str, int] = field(default_factory=dict)
 
 
 def _rate(count: int, duration_s: float) -> float:
-    """Events per minute."""
     if duration_s <= 0:
         return 0.0
     return round(count / (duration_s / 60), 2)
@@ -59,38 +48,17 @@ def _compute_fluency_score(fpm: float, wpm: float,
                             pause_freq: float,
                             false_starts: int,
                             duration_s: float) -> int:
-    """
-    Composite Fluency Score (0–100).
-
-    Scoring breakdown:
-      40 pts — Filler rate (FPM)
-        40 pts if FPM = 0
-         0 pts if FPM >= 10
-      30 pts — Speaking rate (WPM)
-        ideal range: 120–160 WPM
-        penalty for too slow (<100) or too fast (>180)
-      20 pts — Long pause frequency
-        20 pts if 0 pauses/min
-         0 pts if >= 4 pauses/min
-      10 pts — False start rate
-        10 pts if 0 false starts
-         0 pts if >= 5 false starts/min
-    """
-    # Filler component (40 pts)
     filler_pts = max(0, 40 * (1 - fpm / 10))
 
-    # WPM component (30 pts)
     if 120 <= wpm <= 160:
         wpm_pts = 30
     elif wpm < 120:
         wpm_pts = max(0, 30 * (wpm / 120))
-    else:  # > 160
+    else:
         wpm_pts = max(0, 30 * (1 - (wpm - 160) / 60))
 
-    # Pause component (20 pts)
     pause_pts = max(0, 20 * (1 - pause_freq / 4))
 
-    # False start component (10 pts)
     fs_rate = _rate(false_starts, duration_s)
     fs_pts = max(0, 10 * (1 - fs_rate / 5))
 
@@ -99,7 +67,6 @@ def _compute_fluency_score(fpm: float, wpm: float,
 
 
 def _grade(score: int) -> tuple:
-    """Return (letter_grade, verdict)."""
     if score >= 90:
         return "A", "Excellent fluency — minimal disfluencies, great pace"
     elif score >= 75:
@@ -113,9 +80,6 @@ def _grade(score: int) -> tuple:
 
 
 def compute_metrics(tagged: List[TaggedWord]) -> FluentyMetrics:
-    """
-    Compute all fluency metrics from a list of TaggedWord objects.
-    """
     real_words = [tw for tw in tagged if not tw.is_synthetic]
     if not real_words:
         raise ValueError("No words found — check transcription output")

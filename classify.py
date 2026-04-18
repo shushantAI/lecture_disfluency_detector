@@ -1,18 +1,11 @@
 """
 classify.py
------------
-Classifies each word token as one of:
-  FLUENT       - normal speech
-  FILLED_PAUSE - um, uh, er, hmm, like (discourse), you know, basically, right
-  FALSE_START  - word followed immediately by self-correction / restart
-  REPETITION   - same word or phrase repeated consecutively
-  LONG_PAUSE   - silence gap > threshold between words (not a word itself,
-                 but inserted as a synthetic token)
 
-Two-pass approach:
-  Pass 1: Lexical matching for filled pauses
-  Pass 2: Sequence analysis for repetitions and false starts
-  Pass 3: Gap analysis for long pauses between words
+This file handles tagging each word from the transcript with one of
+five labels: FLUENT, FILLED_PAUSE, FALSE_START, REPETITION, or LONG_PAUSE.
+I used a multi-pass approach - first match filler words by their text,
+then look for repeated words, then catch false starts, and finally insert
+long pause tokens wherever there's a big silence gap between words.
 """
 
 import re
@@ -21,7 +14,6 @@ from typing import List, Optional
 from transcribe import Word
 
 
-# ── Label enum ────────────────────────────────────────────────────────────────
 class Label:
     FLUENT       = "FLUENT"
     FILLED_PAUSE = "FILLED_PAUSE"
@@ -37,25 +29,24 @@ class TaggedWord:
     end: float
     confidence: float
     label: str = Label.FLUENT
-    pause_before: float = 0.0    # silence gap before this word (seconds)
-    is_synthetic: bool = False   # True for LONG_PAUSE tokens
+    pause_before: float = 0.0
+    is_synthetic: bool = False
 
 
-# ── Filled pause lexicon ───────────────────────────────────────────────────────
 FILLED_PAUSE_PATTERNS = [
-    r"^u+m+$",           # um, umm, ummm
-    r"^u+h+$",           # uh, uhh
-    r"^e+r+$",           # er, err
-    r"^h+m+$",           # hm, hmm, hmmm
-    r"^mhm+$",           # mhm
-    r"^ah+$",            # ah
-    r"^oh+$",            # oh (hesitation use)
-    r"^like$",           # discourse 'like'
+    r"^u+m+$",
+    r"^u+h+$",
+    r"^e+r+$",
+    r"^h+m+$",
+    r"^mhm+$",
+    r"^ah+$",
+    r"^oh+$",
+    r"^like$",
     r"^basically$",
     r"^literally$",
     r"^actually$",
-    r"^right\??$",       # 'right?' as filler
-    r"^so+$",            # elongated 'so'
+    r"^right\??$",
+    r"^so+$",
     r"^well$",
     r"^i mean$",
     r"^you know$",
@@ -84,7 +75,6 @@ def _clean(text: str) -> str:
     return re.sub(r"[^\w\s]", "", text.strip().lower())
 
 
-# ── Pass 1: Filled pause lexical tagging ──────────────────────────────────────
 def _tag_filled_pauses(words: List[Word]) -> List[TaggedWord]:
     tagged = []
     for w in words:
@@ -100,14 +90,8 @@ def _tag_filled_pauses(words: List[Word]) -> List[TaggedWord]:
     return tagged
 
 
-# ── Pass 2: Repetition detection ──────────────────────────────────────────────
 def _tag_repetitions(tagged: List[TaggedWord],
                      window: int = 4) -> List[TaggedWord]:
-    """
-    Mark a word as REPETITION if the same clean token appears
-    in the previous `window` fluent/filled-pause words.
-    Only marks the duplicate, not the original.
-    """
     for i, tw in enumerate(tagged):
         if tw.label != Label.FLUENT:
             continue
@@ -122,8 +106,6 @@ def _tag_repetitions(tagged: List[TaggedWord],
     return tagged
 
 
-# ── Pass 3: False start detection ─────────────────────────────────────────────
-# Short function words that are naturally brief — never flag these as false starts
 _SHORT_FUNCTION_WORDS = {
     "a", "an", "the", "to", "of", "in", "on", "at", "by", "for",
     "is", "it", "i", "we", "he", "she", "be", "as", "or", "so",
@@ -132,32 +114,20 @@ _SHORT_FUNCTION_WORDS = {
 
 def _tag_false_starts(tagged: List[TaggedWord],
                       max_gap: float = 0.2) -> List[TaggedWord]:
-    """
-    Heuristic: a word is a false start if:
-    - It explicitly ends with a hyphen/dash (truncated word), OR
-    - It is very short duration (<0.09s), is NOT a common function word,
-      AND is followed quickly by a different word within max_gap seconds.
-
-    Deliberately conservative — better to under-detect than over-detect.
-    """
     for i, tw in enumerate(tagged):
         if tw.label != Label.FLUENT:
             continue
 
-        # Explicit truncation marker
         if tw.text.endswith("-") or tw.text.endswith("–"):
             tw.label = Label.FALSE_START
             continue
 
-        # Skip common short function words — they are naturally brief
         clean = _clean(tw.text)
         if clean in _SHORT_FUNCTION_WORDS:
             continue
 
         duration = tw.end - tw.start
 
-        # Only flag if very short AND not a known short word AND immediately
-        # followed by a different word (gap < max_gap)
         if duration < 0.09 and i + 1 < len(tagged):
             next_tw = tagged[i + 1]
             gap = next_tw.start - tw.end
@@ -168,13 +138,8 @@ def _tag_false_starts(tagged: List[TaggedWord],
     return tagged
 
 
-# ── Pass 4: Long pause insertion ──────────────────────────────────────────────
 def _insert_long_pauses(tagged: List[TaggedWord],
                         threshold: float = 0.8) -> List[TaggedWord]:
-    """
-    Insert synthetic LONG_PAUSE tokens between words where the
-    silence gap exceeds `threshold` seconds.
-    """
     result = []
     for i, tw in enumerate(tagged):
         if i > 0:
@@ -195,19 +160,8 @@ def _insert_long_pauses(tagged: List[TaggedWord],
     return result
 
 
-# ── Master classify function ───────────────────────────────────────────────────
 def classify(words: List[Word],
              pause_threshold: float = 0.8) -> List[TaggedWord]:
-    """
-    Run the full disfluency classification pipeline on a list of Words.
-
-    Args:
-        words:           Flat list of Word objects from transcribe.py
-        pause_threshold: Silence gap (seconds) to count as a long pause
-
-    Returns:
-        List of TaggedWord objects with .label set.
-    """
     print(f"\n[Classifier] Tagging {len(words)} words...")
 
     tagged = _tag_filled_pauses(words)
@@ -215,7 +169,6 @@ def classify(words: List[Word],
     tagged = _tag_false_starts(tagged)
     tagged = _insert_long_pauses(tagged, threshold=pause_threshold)
 
-    # Summary
     counts = {}
     for tw in tagged:
         counts[tw.label] = counts.get(tw.label, 0) + 1

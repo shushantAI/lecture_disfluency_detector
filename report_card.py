@@ -1,18 +1,13 @@
+
 """
 report_card.py
---------------
-Generates a professional PDF Speaker Fluency Report Card.
 
-Layout:
-  Page 1 — Header, score ring, key metrics, verdict
-  Page 1 — Filler breakdown table, per-minute trend (embedded image)
-  Page 1 — Word timeline (embedded image)
-  Page 1 — Recommendations, footer
-
-Uses reportlab for PDF generation (no external dependencies beyond pip).
+Generates a PDF report card summarising the speaker's fluency results.
+It includes the score ring, a metrics table, filler breakdown, the
+three visualisation charts, and personalised recommendations.
+I used reportlab for the PDF layout since it gives enough control
+over drawing custom shapes like the score ring.
 """
-
-import os
 from typing import List
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
@@ -31,7 +26,7 @@ from classify import TaggedWord, Label
 from metrics import FluentyMetrics
 
 
-# ── Colour palette ─────────────────────────────────────────────────────────────
+
 NAVY      = colors.HexColor("#1A1A2E")
 NAVY_MID  = colors.HexColor("#16213E")
 PURPLE    = colors.HexColor("#0F3460")
@@ -62,23 +57,17 @@ LABEL_COLOUR_MAP = {
 }
 
 
-# ── Score ring drawing ─────────────────────────────────────────────────────────
 def _score_ring(score: int, grade: str) -> Drawing:
-    """Draw a circular score indicator."""
     size = 130
     d = Drawing(size, size)
-    cx, cy, r = size/2, size/2, 50
+    cx, cy, r = size/2, size/2, 80
 
-    # Background ring
     d.add(Circle(cx, cy, r, fillColor=LIGHT_BG, strokeColor=BORDER, strokeWidth=2))
 
-    # Filled arc approximated by layered arcs (reportlab doesn't have arc fill)
     grade_colour = GRADE_COLOURS.get(grade, CORAL)
-    # Inner circle (solid score colour)
     inner_r = r - 10
     d.add(Circle(cx, cy, inner_r, fillColor=grade_colour, strokeColor=None))
 
-    # White centre
     d.add(Circle(cx, cy, inner_r - 14,
                  fillColor=WHITE, strokeColor=None))
 
@@ -95,7 +84,7 @@ def _score_ring(score: int, grade: str) -> Drawing:
     return d
 
 
-# ── Recommendations ────────────────────────────────────────────────────────────
+
 def _get_recommendations(m: FluentyMetrics) -> List[str]:
     recs = []
     if m.fpm > 5:
@@ -154,7 +143,7 @@ def _get_recommendations(m: FluentyMetrics) -> List[str]:
     return recs
 
 
-# ── Main PDF generator ─────────────────────────────────────────────────────────
+
 def generate_report_card(metrics: FluentyMetrics,
                           tagged: List[TaggedWord],
                           audio_filename: str = "lecture.wav",
@@ -179,7 +168,7 @@ def generate_report_card(metrics: FluentyMetrics,
         s = ParagraphStyle("_", parent=styles[style], **kw)
         return Paragraph(text, s)
 
-    # ── HEADER ────────────────────────────────────────────────────────────────
+
     story.append(P(
         "🎙️  Speaker Fluency Report Card",
         "Heading1",
@@ -194,7 +183,7 @@ def generate_report_card(metrics: FluentyMetrics,
     story.append(HRFlowable(width="100%", thickness=2,
                              color=CORAL, spaceAfter=14))
 
-    # ── SCORE + KEY METRICS (side by side) ────────────────────────────────────
+
     ring = _score_ring(metrics.fluency_score, metrics.grade)
 
     grade_colour = GRADE_COLOURS.get(metrics.grade, CORAL)
@@ -240,6 +229,7 @@ def generate_report_card(metrics: FluentyMetrics,
     combo.setStyle(TableStyle([
         ("VALIGN", (0,0), (-1,-1), "MIDDLE"),
         ("LEFTPADDING", (0,0), (0,-1), 0),
+        ("LEFTPADDING", (1,0), (1,-1), 45),
     ]))
     story.append(combo)
     story.append(Spacer(1, 10))
@@ -254,7 +244,7 @@ def generate_report_card(metrics: FluentyMetrics,
         spaceAfter=14,
     ))
 
-    # ── FILLER BREAKDOWN ──────────────────────────────────────────────────────
+
     if metrics.filler_breakdown:
         story.append(P("Filler Word Breakdown", "Heading2",
                        fontSize=13, textColor=NAVY, spaceAfter=6))
@@ -279,7 +269,7 @@ def generate_report_card(metrics: FluentyMetrics,
         story.append(fb_tbl)
         story.append(Spacer(1, 14))
 
-    # ── VISUALISATIONS ────────────────────────────────────────────────────────
+
     page_w = W - 3.6*cm
     for img_path, caption in [
         (timeline_img,    "Word-level Disfluency Timeline"),
@@ -293,7 +283,7 @@ def generate_report_card(metrics: FluentyMetrics,
                                height=page_w * 0.28))
             story.append(Spacer(1, 12))
 
-    # ── RECOMMENDATIONS ───────────────────────────────────────────────────────
+
     story.append(HRFlowable(width="100%", thickness=1,
                              color=BORDER, spaceAfter=10))
     story.append(P("📋  Recommendations", "Heading2",
@@ -307,14 +297,13 @@ def generate_report_card(metrics: FluentyMetrics,
             leftIndent=10,
         ))
 
-    # ── FOOTER ────────────────────────────────────────────────────────────────
+
     story.append(Spacer(1, 16))
     story.append(HRFlowable(width="100%", thickness=1,
                              color=BORDER, spaceAfter=6))
     story.append(P(
-        "Generated by <b>Lecture Speech Disfluency Detector</b>  ·  "
-        "Speech Processing Course Project  ·  2024–25  ·  "
-        "github.com/nyrahealth/CrisperWhisper",
+        "Speech Understanding Course Project  ·  "
+        "github.com/shushantAI/lecture_disfluency_detector.git",
         fontSize=8, textColor=MUTED, alignment=TA_CENTER,
     ))
 

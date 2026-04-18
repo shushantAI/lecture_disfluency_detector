@@ -1,12 +1,10 @@
 """
 transcribe.py
--------------
-Verbatim transcription using CrisperWhisper.
-Preserves every filler word (um, uh, like, you know) with precise
-word-level timestamps.
 
-Falls back to faster-whisper with an initial_prompt trick if
-CrisperWhisper is not available (e.g. limited VRAM).
+Loads an audio file and runs it through CrisperWhisper to get a word-by-word
+transcript with timestamps. I also added a VAD (voice activity detection) step
+using Silero to remove silence before transcribing, which helps accuracy.
+If CrisperWhisper doesn't work (e.g. no GPU), it falls back to faster-whisper.
 """
 
 import os
@@ -22,8 +20,8 @@ from tqdm import tqdm
 @dataclass
 class Word:
     text: str
-    start: float        # seconds
-    end: float          # seconds
+    start: float
+    end: float
     confidence: float = 1.0
     speaker: Optional[str] = None
 
@@ -37,7 +35,6 @@ class Segment:
 
 
 def load_audio(path: str, target_sr: int = 16000) -> np.ndarray:
-    """Load audio file and resample to target sample rate."""
     import librosa
     audio, sr = librosa.load(path, sr=target_sr, mono=True)
     print(f"  Loaded: {path} | duration={audio.shape[0]/target_sr:.1f}s | sr={sr}Hz")
@@ -48,10 +45,6 @@ def apply_vad(audio: np.ndarray, sr: int = 16000,
               threshold: float = 0.4,
               min_speech_duration: float = 0.25,
               min_silence_duration: float = 0.8) -> List[dict]:
-    """
-    Apply Silero VAD to detect speech segments.
-    Returns list of {start, end} dicts (in seconds).
-    """
     print("  Running VAD (Silero)...")
     try:
         model, utils = torch.hub.load(
@@ -84,10 +77,6 @@ def apply_vad(audio: np.ndarray, sr: int = 16000,
 def transcribe_crisperwhisper(audio: np.ndarray,
                                sr: int = 16000,
                                model_size: str = "nyrahealth/CrisperWhisper") -> List[Segment]:
-    """
-    Transcribe using CrisperWhisper for verbatim output.
-    Keeps filler words (um, uh, like, you know) in transcript.
-    """
     print(f"  Loading CrisperWhisper ({model_size})...")
     try:
         from transformers import pipeline as hf_pipeline
@@ -122,10 +111,6 @@ def transcribe_crisperwhisper(audio: np.ndarray,
 
 
 def transcribe_fallback(audio: np.ndarray, sr: int = 16000) -> List[Segment]:
-    """
-    Fallback: faster-whisper with an initial_prompt that biases
-    the model toward retaining filler words.
-    """
     from faster_whisper import WhisperModel
 
     FILLER_PROMPT = (
@@ -139,7 +124,6 @@ def transcribe_fallback(audio: np.ndarray, sr: int = 16000) -> List[Segment]:
     print(f"  Loading faster-whisper (base) on {device}...")
     model = WhisperModel("base", device=device, compute_type=compute)
 
-    # Write audio to a temp file (faster-whisper needs a file path)
     import tempfile
     with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as f:
         sf.write(f.name, audio, sr)
@@ -150,7 +134,7 @@ def transcribe_fallback(audio: np.ndarray, sr: int = 16000) -> List[Segment]:
         language="en",
         word_timestamps=True,
         initial_prompt=FILLER_PROMPT,
-        vad_filter=False,  # VAD already applied
+        vad_filter=False,
     )
     os.unlink(tmp_path)
 
@@ -175,10 +159,8 @@ def transcribe_fallback(audio: np.ndarray, sr: int = 16000) -> List[Segment]:
 
 
 def _parse_hf_output(result: dict) -> List[Segment]:
-    """Parse HuggingFace pipeline output into Segment/Word objects."""
     chunks = result.get("chunks", [])
     if not chunks:
-        # No word-level timestamps — wrap full text in one segment
         return [Segment(
             text=result.get("text", ""),
             start=0.0,
@@ -201,7 +183,6 @@ def _parse_hf_output(result: dict) -> List[Segment]:
     current_words = []
     current_start = words[0].start if words else 0.0
     SEGMENT_DURATION = 30.0
-
     for w in words:
         current_words.append(w)
         if w.end - current_start >= SEGMENT_DURATION:
@@ -228,10 +209,6 @@ def _parse_hf_output(result: dict) -> List[Segment]:
 def transcribe(audio_path: str,
                use_vad: bool = True,
                model: str = "nyrahealth/CrisperWhisper") -> List[Word]:
-    """
-    Full transcription pipeline.
-    Returns a flat list of Word objects covering the entire audio.
-    """
     print("\n[1/2] Loading audio...")
     audio = load_audio(audio_path)
     sr = 16000
@@ -244,7 +221,7 @@ def transcribe(audio_path: str,
             start_sample = int(seg["start"] * sr)
             end_sample = int(seg["end"] * sr)
             chunk = audio[start_sample:end_sample]
-            if len(chunk) < sr * 0.1:  # skip very short chunks
+            if len(chunk) < sr * 0.1:
                 continue
             segs = transcribe_crisperwhisper(chunk, sr, model)
             for s in segs:
@@ -256,7 +233,6 @@ def transcribe(audio_path: str,
                         end=w.end + seg["start"],
                         confidence=w.confidence,
                     ))
-        return all_words
     else:
         print("\n[2/2] Transcribing (no VAD)...")
         segs = transcribe_crisperwhisper(audio, sr, model)

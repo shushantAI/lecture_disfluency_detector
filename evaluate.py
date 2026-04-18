@@ -1,21 +1,10 @@
 """
 evaluate.py
------------
-Evaluates disfluency detection performance against ground-truth labels.
 
-Two modes:
-  1. evaluate_file()   — evaluate predictions vs ground truth for one file
-  2. evaluate_tedlium() — batch evaluation on TED-LIUM 3 subset
-  3. fairness_report() — break down F1 by speaker accent group
-
-Metrics reported:
-  Precision, Recall, F1 — per disfluency class + macro average
-  Fairness gap — max F1 difference across accent groups
-
-Usage:
-  python evaluate.py --gt ground_truth.json --pred tagged.json
-  python evaluate.py --tedlium /path/to/tedlium --max-files 50
-  python evaluate.py --demo   (runs on synthetic demo data)
+This script evaluates how well the classifier does against ground truth labels.
+I compute precision, recall and F1 for each disfluency type, then average them.
+There's also a fairness check that breaks down F1 by speaker accent group
+to see if the model performs worse for non-native speakers.
 """
 
 import argparse
@@ -28,7 +17,6 @@ from typing import Dict, List, Optional, Tuple
 from classify import TaggedWord, Label
 
 
-# ── Result types ──────────────────────────────────────────────────────────────
 @dataclass
 class ClassMetrics:
     label: str
@@ -59,35 +47,27 @@ class EvalResult:
     accuracy: float = 0.0
     n_tokens: int = 0
 
-    # Fairness
     accent_f1: Dict[str, float] = field(default_factory=dict)
     fairness_gap: float = 0.0
 
 
-# ── Core evaluation logic ──────────────────────────────────────────────────────
 EVAL_LABELS = [
     Label.FILLED_PAUSE,
     Label.FALSE_START,
     Label.REPETITION,
-]  # LONG_PAUSE and FLUENT excluded from F1 (VAD handles pauses separately)
+]
 
 
 def _align_by_time(pred: List[TaggedWord],
                    gt: List[TaggedWord],
                    tol: float = 0.05) -> List[Tuple[TaggedWord, TaggedWord]]:
-    """
-    Align predicted and ground-truth word lists by timestamp overlap.
-    Returns list of (pred_word, gt_word) pairs.
-    Uses a simple O(n) sweep since both lists are time-ordered.
-    """
     pairs = []
     j = 0
     for p in pred:
         if p.is_synthetic:
             continue
-        # Find best matching gt word by overlap
         best_gt = None
-        best_overlap = tol  # minimum overlap threshold
+        best_overlap = tol
         while j < len(gt) and gt[j].end < p.start - tol:
             j += 1
         k = j
@@ -104,9 +84,6 @@ def _align_by_time(pred: List[TaggedWord],
 
 def evaluate_predictions(pred: List[TaggedWord],
                           gt: List[TaggedWord]) -> EvalResult:
-    """
-    Compare predicted tags to ground truth, return EvalResult.
-    """
     result = EvalResult()
     pairs = _align_by_time(pred, gt)
     result.n_tokens = len(pairs)
@@ -115,7 +92,6 @@ def evaluate_predictions(pred: List[TaggedWord],
         print("  WARNING: No aligned pairs found — check timestamp format")
         return result
 
-    # Per-class counters
     class_metrics = {l: ClassMetrics(label=l) for l in EVAL_LABELS}
     correct = 0
 
@@ -167,7 +143,7 @@ def print_eval_result(result: EvalResult, title: str = "Evaluation Results"):
     print(f"{'='*58}")
 
 
-# ── Ground truth loading ───────────────────────────────────────────────────────
+
 def load_tagged_json(path: str) -> List[TaggedWord]:
     with open(path) as f:
         data = json.load(f)
@@ -175,13 +151,6 @@ def load_tagged_json(path: str) -> List[TaggedWord]:
 
 
 def load_tedlium_gt(stm_path: str) -> List[TaggedWord]:
-    """
-    Parse a TED-LIUM .stm file into TaggedWord ground truth.
-    TED-LIUM verbatim transcripts mark fillers with <uh> and <um> tags.
-    We convert these to FILLED_PAUSE labels; everything else is FLUENT.
-
-    STM format: <filename> <channel> <speaker> <start> <end> <label> <text>
-    """
     words = []
     with open(stm_path) as f:
         for line in f:
@@ -208,13 +177,12 @@ def load_tedlium_gt(stm_path: str) -> List[TaggedWord]:
                 t_start = seg_start + i * step
                 t_end   = t_start + step * 0.9
 
-                # TED-LIUM marks fillers as <uh>, <um>, <noise>, etc.
                 if tok.startswith("<") and tok.endswith(">"):
                     inner = tok[1:-1].lower()
                     if inner in ("uh", "um", "hm", "ah", "er"):
                         label = Label.FILLED_PAUSE
                     else:
-                        continue  # skip noise/laughter tokens
+                        continue
                     clean_text = inner
                 else:
                     label = Label.FLUENT
@@ -230,29 +198,19 @@ def load_tedlium_gt(stm_path: str) -> List[TaggedWord]:
     return words
 
 
-# ── Fairness evaluation ────────────────────────────────────────────────────────
-# Accent group mapping for TED-LIUM speakers (manually curated subset)
-# Keys are speaker IDs from TED-LIUM, values are accent group labels
 SPEAKER_ACCENT_MAP = {
-    # Native English (US/UK)
     "AlGore_2006":          "native_en",
     "BillGates_2010":       "native_en",
     "DanDennett_2009":      "native_en",
     "RichardDawkins_2009":  "native_en",
-    # Indian English
     "SunilLalvani_2009":    "indian_en",
     "PranavMistry_2009":    "indian_en",
-    # Other non-native
     "HanRosling_2006":      "non_native_other",
     "RicardoSemler_2014":   "non_native_other",
 }
 
 
 def fairness_report(results_by_speaker: Dict[str, EvalResult]) -> Dict[str, float]:
-    """
-    Given per-speaker EvalResults with known accent groups,
-    compute mean F1 per accent group and flag fairness gaps.
-    """
     group_f1s: Dict[str, List[float]] = defaultdict(list)
 
     for speaker_id, result in results_by_speaker.items():
@@ -265,13 +223,6 @@ def fairness_report(results_by_speaker: Dict[str, EvalResult]) -> Dict[str, floa
 
 def evaluate_tedlium(tedlium_root: str,
                      max_files: int = 20) -> EvalResult:
-    """
-    Batch-evaluate on TED-LIUM 3 STM files.
-    Runs full classify pipeline on each audio file and compares to STM ground truth.
-
-    Requires TED-LIUM 3 downloaded locally:
-      https://huggingface.co/datasets/LIUM/tedlium
-    """
     from transcribe import transcribe
     from classify import classify
 
@@ -293,7 +244,6 @@ def evaluate_tedlium(tedlium_root: str,
         speaker = stm_file.replace(".stm", "")
         stm_path = os.path.join(stm_dir, stm_file)
 
-        # Find matching wav/sph
         wav_path = None
         for ext in [".wav", ".sph", ".mp3"]:
             p = os.path.join(wav_dir, speaker + ext)
@@ -319,10 +269,8 @@ def evaluate_tedlium(tedlium_root: str,
             print(f"  Error on {speaker}: {e}")
             continue
 
-    # Aggregate result
     agg = evaluate_predictions(all_pred, all_gt)
 
-    # Fairness breakdown
     accent_f1 = fairness_report(per_speaker)
     agg.accent_f1 = accent_f1
     if accent_f1:
@@ -332,13 +280,7 @@ def evaluate_tedlium(tedlium_root: str,
     return agg
 
 
-# ── Demo evaluation on synthetic data ─────────────────────────────────────────
 def demo_evaluation():
-    """
-    Runs evaluation on the synthetic demo data.
-    Uses the demo transcript as both prediction and ground truth,
-    then introduces deliberate label noise to simulate real errors.
-    """
     import random
     random.seed(42)
 
@@ -355,7 +297,6 @@ def demo_evaluation():
         import copy
         p = copy.copy(tw)
         if not tw.is_synthetic and random.random() < 0.15:
-            # Randomly flip label to simulate model error
             alt = [l for l in [Label.FILLED_PAUSE, Label.FALSE_START,
                                 Label.REPETITION, Label.FLUENT]
                    if l != tw.label]
@@ -370,7 +311,6 @@ def demo_evaluation():
         "indian_en":        result.macro_f1 - 0.04,
         "non_native_other": result.macro_f1 - 0.07,
     }
-    # Clamp to [0,1]
     result.accent_f1 = {k: min(1.0, max(0.0, v))
                         for k, v in result.accent_f1.items()}
     f1_vals = list(result.accent_f1.values())
@@ -378,7 +318,6 @@ def demo_evaluation():
 
     print_eval_result(result, "Demo Evaluation (15% simulated noise)")
 
-    # Save
     import dataclasses
     out = {
         "macro_f1":        result.macro_f1,
@@ -399,7 +338,7 @@ def demo_evaluation():
     return result
 
 
-# ── CLI ────────────────────────────────────────────────────────────────────────
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Disfluency Detector Evaluation")
     parser.add_argument("--gt",       help="Ground truth tagged JSON")

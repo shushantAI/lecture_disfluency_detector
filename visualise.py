@@ -1,18 +1,13 @@
 """
 visualise.py
-------------
-Generates two figures:
 
-  1. Word Timeline  — colour-coded word chips on a time axis
-  2. Mel Spectrogram + Overlay — spectrogram with disfluency markers
-  3. Per-minute trend chart  — FPM / WPM bar chart over time
+Generates three charts from the tagged transcript and metrics:
+1. A word timeline showing each word colour-coded by label
+2. A mel spectrogram with disfluency regions highlighted
+3. A per-minute bar chart of filler rate and speaking rate
 
-Colours:
-  FLUENT       → green   (#1E8449)
-  FILLED_PAUSE → coral   (#E94560)
-  FALSE_START  → orange  (#F5A623)
-  REPETITION   → purple  (#6C3483)
-  LONG_PAUSE   → amber   (#C87D10) (dashed region)
+I used matplotlib with a dark background to keep it consistent
+with the overall report card theme.
 """
 
 import numpy as np
@@ -27,7 +22,6 @@ from typing import List, Optional
 from classify import TaggedWord, Label
 from metrics import FluentyMetrics
 
-# ── Colour map ─────────────────────────────────────────────────────────────────
 COLOURS = {
     Label.FLUENT:       "#1E8449",
     Label.FILLED_PAUSE: "#E94560",
@@ -51,15 +45,10 @@ plt.rcParams.update({
 })
 
 
-# ── Figure 1: Word Timeline ────────────────────────────────────────────────────
 def plot_word_timeline(tagged: List[TaggedWord],
                        duration: float,
                        output_path: str = "demo/timeline.png",
                        max_words: int = 120):
-    """
-    Horizontal bar of word chips, colour-coded by disfluency label.
-    Shows up to max_words from the beginning.
-    """
     display_words = [w for w in tagged if not w.is_synthetic][:max_words]
     pauses = [w for w in tagged if w.label == Label.LONG_PAUSE]
 
@@ -70,14 +59,12 @@ def plot_word_timeline(tagged: List[TaggedWord],
     t_end = display_words[-1].end if display_words else duration
     t_start = display_words[0].start if display_words else 0
 
-    # Draw pause regions
     for p in pauses:
         if p.start > t_end:
             break
         ax.axvspan(p.start, p.end, alpha=0.25,
                    color=COLOURS[Label.LONG_PAUSE], zorder=1)
 
-    # Draw word chips
     for w in display_words:
         colour = COLOURS[w.label]
         dur = max(w.end - w.start, 0.05)
@@ -91,7 +78,6 @@ def plot_word_timeline(tagged: List[TaggedWord],
         )
         ax.add_patch(rect)
 
-        # Only label if chip is wide enough
         if dur > 0.18:
             fontsize = max(5, min(8, dur * 18))
             ax.text(
@@ -102,7 +88,6 @@ def plot_word_timeline(tagged: List[TaggedWord],
                 clip_on=True,
             )
 
-    # Time axis
     ax.set_xlim(t_start, t_end)
     ax.set_ylim(0, 1)
     ax.set_xlabel("Time (seconds)", color="#AABBCC", fontsize=10)
@@ -113,7 +98,6 @@ def plot_word_timeline(tagged: List[TaggedWord],
     ax.set_title("Word-level Disfluency Timeline",
                  color="white", fontsize=13, pad=10, fontweight="bold")
 
-    # Legend
     legend_patches = [
         mpatches.Patch(color=COLOURS[l], label=LABEL_NAMES[l])
         for l in [Label.FLUENT, Label.FILLED_PAUSE,
@@ -131,13 +115,9 @@ def plot_word_timeline(tagged: List[TaggedWord],
     print(f"  Saved timeline → {output_path}")
 
 
-# ── Figure 2: Mel Spectrogram + Overlay ───────────────────────────────────────
 def plot_spectrogram(audio_path: str,
                      tagged: List[TaggedWord],
                      output_path: str = "demo/spectrogram.png"):
-    """
-    Mel spectrogram with disfluency event markers overlaid.
-    """
     import librosa
     import librosa.display
 
@@ -158,7 +138,6 @@ def plot_spectrogram(audio_path: str,
     fig.colorbar(img, ax=ax, format="%+2.0f dB",
                  pad=0.01).ax.yaxis.set_tick_params(color="white")
 
-    # Overlay disfluency markers
     for w in tagged:
         if w.label in (Label.FLUENT, Label.LONG_PAUSE):
             continue
@@ -166,7 +145,6 @@ def plot_spectrogram(audio_path: str,
         ax.axvspan(w.start, w.end, alpha=0.35, color=colour, zorder=3)
         ax.axvline(w.start, color=colour, linewidth=0.8, alpha=0.7, zorder=4)
 
-    # Pause regions
     for w in tagged:
         if w.label == Label.LONG_PAUSE:
             ax.axvspan(w.start, w.end, alpha=0.15,
@@ -181,7 +159,6 @@ def plot_spectrogram(audio_path: str,
     for spine in ax.spines.values():
         spine.set_edgecolor("#334466")
 
-    # Mini legend
     legend_patches = [
         mpatches.Patch(color=COLOURS[l], label=LABEL_NAMES[l], alpha=0.7)
         for l in [Label.FILLED_PAUSE, Label.FALSE_START,
@@ -199,13 +176,8 @@ def plot_spectrogram(audio_path: str,
     print(f"  Saved spectrogram → {output_path}")
 
 
-# ── Figure 3: Per-minute trend ─────────────────────────────────────────────────
 def plot_trend(metrics: FluentyMetrics,
                output_path: str = "demo/trend.png"):
-    """
-    Side-by-side bar chart of FPM and WPM per minute.
-    Helps speakers see exactly where in the lecture fluency dropped.
-    """
     pm = metrics.per_minute
     if not pm:
         print("  No per-minute data — skipping trend chart")
@@ -218,10 +190,8 @@ def plot_trend(metrics: FluentyMetrics,
     width = 0.35
 
     fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(max(8, len(pm) * 1.4), 6),
-                                    sharex=True)
-    fig.patch.set_facecolor("#1A1A2E")
+                                    sharex=True)    fig.patch.set_facecolor("#1A1A2E")
 
-    # FPM bars
     ax1.set_facecolor("#16213E")
     bars1 = ax1.bar(x, fpm_vals, color="#E94560", alpha=0.85, width=0.6)
     ax1.axhline(metrics.fpm, color="#F5A623", linewidth=1.5,
@@ -234,14 +204,12 @@ def plot_trend(metrics: FluentyMetrics,
                edgecolor="#334466", fontsize=9)
     for spine in ax1.spines.values():
         spine.set_edgecolor("#334466")
-    # Value labels
     for bar, val in zip(bars1, fpm_vals):
         if val > 0:
             ax1.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.05,
                      f"{val:.1f}", ha="center", va="bottom",
                      fontsize=8, color="white")
 
-    # WPM bars
     ax2.set_facecolor("#16213E")
     bars2 = ax2.bar(x, wpm_vals, color="#1E8449", alpha=0.85, width=0.6)
     ax2.axhspan(120, 160, alpha=0.15, color="#27AE60", label="Ideal range")
@@ -269,7 +237,6 @@ def generate_all_visualisations(audio_path: str,
                                  tagged: List[TaggedWord],
                                  metrics: FluentyMetrics,
                                  out_dir: str = "demo"):
-    """Generate all three visualisation figures."""
     import os
     os.makedirs(out_dir, exist_ok=True)
     print("\n[Visualise] Generating figures...")

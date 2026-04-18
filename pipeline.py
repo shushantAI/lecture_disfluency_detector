@@ -1,24 +1,10 @@
 """
 pipeline.py
------------
-Main entry point for the Lecture Speech Disfluency Detector.
 
-Usage:
-  python pipeline.py <audio_file> [options]
-
-Examples:
-  python pipeline.py lecture.wav
-  python pipeline.py lecture.mp3 --speaker "Dr. Sharma" --out results/
-  python pipeline.py lecture.wav --no-vad --model faster-whisper
-
-Full pipeline:
-  1. Load + resample audio
-  2. VAD (Silero) — strip silence
-  3. Transcribe (CrisperWhisper) — verbatim with filler words
-  4. Classify — tag each word by disfluency type
-  5. Metrics — compute FPM, WPM, score
-  6. Visualise — timeline, spectrogram, trend chart
-  7. Report Card — generate PDF
+This is the main script to run the whole disfluency detection system.
+You give it an audio file and it runs through transcription, classification,
+metrics, visualisation and report card generation in order.
+You can also import and call run() directly from another script if needed.
 """
 
 import argparse
@@ -66,13 +52,8 @@ def run(audio_path: str,
         pause_threshold: float = 0.8,
         generate_report: bool = True,
         generate_viz: bool = True):
-    """
-    Run the full disfluency detection pipeline.
-    Can also be called programmatically.
-    """
     t0 = time.time()
 
-    # Setup output directory
     os.makedirs(out_dir, exist_ok=True)
     stem = Path(audio_path).stem
 
@@ -85,7 +66,7 @@ def run(audio_path: str,
     print(f"  Output   : {out_dir}/")
     print("="*60)
 
-    # ── Step 1: Transcribe ────────────────────────────────────────────────────
+
     print("\n📝 STEP 1 — Transcription")
     from transcribe import transcribe
     words = transcribe(audio_path, use_vad=use_vad, model=model)
@@ -100,7 +81,7 @@ def run(audio_path: str,
                    else vars(w) for w in words], f, indent=2)
     print(f"  Saved {len(words)} words → {words_path}")
 
-    # ── Step 2: Classify ──────────────────────────────────────────────────────
+
     print("\n🏷️  STEP 2 — Disfluency Classification")
     from classify import classify
     tagged = classify(words, pause_threshold=pause_threshold)
@@ -110,7 +91,7 @@ def run(audio_path: str,
         json.dump([vars(tw) for tw in tagged], f, indent=2)
     print(f"  Saved {len(tagged)} tagged tokens → {tagged_path}")
 
-    # ── Step 3: Metrics ───────────────────────────────────────────────────────
+
     print("\n📊 STEP 3 — Metrics")
     from metrics import compute_metrics
     metrics = compute_metrics(tagged)
@@ -120,7 +101,6 @@ def run(audio_path: str,
         json.dump(dataclasses.asdict(metrics), f, indent=2)
     print(f"  Saved metrics → {metrics_path}")
 
-    # ── Step 4: Visualisations ────────────────────────────────────────────────
     timeline_img    = os.path.join(out_dir, f"{stem}_timeline.png")
     spectrogram_img = os.path.join(out_dir, f"{stem}_spectrogram.png")
     trend_img       = os.path.join(out_dir, f"{stem}_trend.png")
@@ -133,7 +113,6 @@ def run(audio_path: str,
         plot_spectrogram(audio_path, tagged, spectrogram_img)
         plot_trend(metrics, trend_img)
 
-    # ── Step 5: Report Card ───────────────────────────────────────────────────
     report_path = os.path.join(out_dir, f"{stem}_report_card.pdf")
 
     if generate_report:
@@ -149,7 +128,7 @@ def run(audio_path: str,
             spectrogram_img=spectrogram_img,
         )
 
-    # ── Done ──────────────────────────────────────────────────────────────────
+
     elapsed = time.time() - t0
     print("\n" + "="*60)
     print(f"  ✅ DONE in {elapsed:.1f}s")
