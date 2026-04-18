@@ -5,7 +5,7 @@
 **Speech Understanding Course Project**
 
 
-## 👨‍💻 Team Details
+## Team Details
 
 | Name | Roll Number |
 |------|------------|
