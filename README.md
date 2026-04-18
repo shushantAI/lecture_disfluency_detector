@@ -2,7 +2,16 @@
 
 > Automatically detects filler words, hesitations & false starts in lecture speech — with a **Speaker Fluency Report Card**
 
-**Speech Processing Course Project · 2024–25**
+**Speech Understanding Course Project**
+
+
+## 👨‍💻 Team Details
+
+| Name | Roll Number |
+|------|------------|
+| Shushant Kumar Tiwari | M25DE1071 |
+| Aniket Srivastava | M25DE1051 |
+| Akshay Kumar | M25DE1028 |
 
 ---
 

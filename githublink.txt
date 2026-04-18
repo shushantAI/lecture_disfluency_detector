@@ -1,0 +1,9 @@
+https://github.com/shushantAI/lecture_disfluency_detector.git
+
+Submitted by:
+
+| Name                  | Roll Number |
+| --------------------- | ----------- |
+| Shushant Kumar Tiwari | M25DE1071   |
+| Aniket Srivastava     | M25DE1051   |
+| Akshay Kumar          | M25DE1028   |
